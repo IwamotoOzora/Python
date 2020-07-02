@@ -3,14 +3,14 @@ weight = float(input())
 print("身長を入力してください")
 height = float(input()) / 100
 
-BMI = weight / height ** 2
+bmi = weight / height ** 2
 
-if BMI < 18.5:
+if bmi < 18.5:
     message = "やせ"
-if 18.5 <= BMI < 25:
+if bmi >= 18.5 and bmi < 25:
     message = "標準"
-if 25 <= BMI < 30:
+if bmi >= 25 and bmi < 30:
     message = "肥満"
-if BMI > 30:
+if bmi > 30:
     message = "高度肥満"
-print("あなたは" + "「" + message + "」" + "です。") 
+print("あなたは「{}」です。" .format(message))
